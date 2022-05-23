@@ -1,0 +1,32 @@
+.mainContainer {
+    background-color: #c81919;
+    display: flex;
+    justify-content: center;
+}
+
+.containerInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+    width: 80%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    margin: 0 auto;
+}
+.input {
+    width: 60%
+}
+
+.textArea {
+    width: 60%;
+    height: 60%
+}

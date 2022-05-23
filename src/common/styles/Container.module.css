@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 20px 0;
+    height: 100%;
+    width: 100%;
+}
