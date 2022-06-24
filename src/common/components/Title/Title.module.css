@@ -1,0 +1,14 @@
+.titleBox {
+    width: 100%;
+    padding: 1em 0;
+    margin: 1em 0;
+}
+
+.text {
+    color: #ff651c;
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 32px;
+}

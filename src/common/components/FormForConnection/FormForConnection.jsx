@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './FormForConnection.module.css';
-import btn from '../../common/styles/Button.module.css'
+import btn from '../../styles/Button.module.css'
 
 const FormForConnection = () => {
     return (

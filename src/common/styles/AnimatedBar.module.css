@@ -1,0 +1,40 @@
+.animatedBar {
+    content: '';
+    display: block;
+    left: 0;
+    margin: 0 auto 0 auto;
+    position: relative;
+    right: 0;
+    width: 200px;
+    border-radius: 4px;
+    background-color: rgb(255 101 28);
+    padding: 2px;
+}
+
+.animatedBar::after {
+    background-color: rgb(33 33 33);
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 8px;
+    left: 0;
+    -webkit-animation: heading-move 2s infinite linear;
+    animation: heading-move 4s infinite linear;
+}
+
+
+
+@keyframes heading-move {
+    from {
+        left: 0;
+    }
+
+    50% {
+        left: 192px;
+    }
+
+    to {
+        left: 0;
+    }
+}

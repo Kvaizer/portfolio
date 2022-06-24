@@ -1,0 +1,26 @@
+.box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 40%;
+    margin: 10px
+}
+
+.text {
+    text-align: start;
+}
+
+@media screen and (max-width: 1000px) {
+    .box {
+        width: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .text {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,117 @@
+.loginBox {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+    min-height: 20em;
+    margin: 10px 10px;
+}
+
+.contactMe {
+    width: 60%;
+    margin-right: 2em;
+}
+
+input, textarea{
+    background-color: rgb(33 33 33);
+    border: none;
+    border-bottom: 1px solid rgb(29 29 29);
+    border-radius: 5px;
+    font-size: 15px;
+    width: 45%;
+    padding: 9px 14px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+    font-family: Lato, sans-serif;
+    color: lime;
+}
+
+form {
+
+    width: 100%
+}
+
+.message textarea {
+    resize: vertical;
+    height: 10em;
+    font-family: Lato, sans-serif;
+    width: 100%;
+}
+
+.nameEmail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.name, .email {
+    width: 45%;
+}
+
+.name input, .email input {
+    width: 100%;
+}
+
+
+.subject input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.error {
+    position: relative;
+}
+
+.textError {
+    position: absolute;
+    bottom: -3em;
+    left: 2em;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #FF651C;
+}
+
+.textError::after {
+    content: '';
+    position: absolute;
+    top: -70%;
+    left: 2em;
+    border: 14px solid rgba(0, 0, 0, 0);
+    border-bottom-color: white;
+}
+
+.btnBox {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactBox {
+    display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    .loginBox {
+        width: 100%;
+    }
+
+    .nameEmail {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .name, .email {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .title {
+        text-align: center;
+    }
+}
+

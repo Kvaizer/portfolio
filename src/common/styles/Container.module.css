@@ -1,9 +1,14 @@
 .container {
     display: flex;
     justify-content: space-around;
+    background-color: rgb(33 37 41);
     flex-flow: row wrap;
     align-items: center;
     margin: 20px 0;
-    height: 100%;
-    width: 100%;
+    max-width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    height: 90vh;
+    overflow: hidden;
+    overflow-y: scroll;
 }
