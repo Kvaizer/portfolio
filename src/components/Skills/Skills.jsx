@@ -98,7 +98,7 @@ const Skills = () => {
                         <div className={s.cardsContainer}>
                             <h2>Education</h2>
                             <InfoCard title={'React/Redux/TS course'} place={'IT-INCUBATOR'} text={'Retraining as a Frontend Developer. Stack: React/Redux/TS'}/>
-                            <InfoCard title={'Team project'} place={'IT-KAMASUTRA'} text={'Project'}/>
+                            <InfoCard title={'Team project'} place={'IT-KAMASUTRA'} text={'App for infinity education'}/>
                             <InfoCard title={'Specialist Degree of Rocket Engineering'} place={'BMSTU(Moscow)'} text={'Design, production and operation of rockets and rocket launch systems'}/>
                         </div>
                         <div className={s.cardsContainer}>
