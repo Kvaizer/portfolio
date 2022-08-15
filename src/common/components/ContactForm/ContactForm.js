@@ -2,8 +2,11 @@ import React from 'react';
 import {useFormik} from 'formik';
 import s from './ContactForm.module.css'
 import btn from '../../styles/Button.module.css'
+import axios from "axios";
+import {Fade} from "react-reveal";
 
-const ContactForm = () => {
+const ContactForm = (props) => {
+
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -34,13 +37,21 @@ const ContactForm = () => {
             return errors;
         },
         onSubmit: values => {
-            alert(alert(JSON.stringify(values)))
-            formik.resetForm()
+            debugger
+            axios.post('https://smtp-mail-nodejs-server.herokuapp.com/sendMessage', {
+                email: values.email,
+                name: values.name,
+                subject: values.subject,
+                message: values.message
+            }).then(res => {
+                props.setPopUp(true)
+            })
         },
     })
 
     return (
-        <section className={s.loginBox}>
+        <Fade left>
+            <section className={s.loginBox}>
                 <h2 className={s.title}>Contact Me</h2>
                 <form onSubmit={formik.handleSubmit}>
                     <div className={s.nameEmail}>
@@ -82,14 +93,17 @@ const ContactForm = () => {
                         </div>}
                     </div>
                     <div className={s.btnBox}>
-                        <button type='submit'
+                        <button type={'submit'}
                                 className={btn.clickbtn}
-                                disabled={formik.isSubmitting}>
+                        >
                             Send Message
                         </button>
                     </div>
                 </form>
-        </section>
+            </section>
+
+        </Fade>
+
     );
 };
 

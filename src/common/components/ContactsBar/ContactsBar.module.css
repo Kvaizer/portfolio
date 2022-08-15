@@ -32,3 +32,9 @@ a:hover {
     width: 50px;
     background-color: gray;
 }
+
+@media screen and (max-width: 470px) {
+   .line {
+       width: 0;
+   }
+}

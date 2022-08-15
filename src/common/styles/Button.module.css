@@ -15,6 +15,6 @@
     transform: rotate(10deg);
     background-color: transparent;
     color: lime;
-    transition: all .5s ease 0s
+    transition: all .5s ease 0s;
 }
 

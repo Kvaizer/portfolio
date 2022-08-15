@@ -81,6 +81,10 @@ p {
     width: 100%;
 }
 
+.selfy {
+    width: 400px;
+    height: 400px;
+}
 
 @media screen and (max-width: 1356px) {
     .aboutMe {
@@ -90,6 +94,13 @@ p {
 
     .container {
         padding: 0 30px 30px 30px;
+    }
+}
+
+@media screen and (max-width: 762px) {
+    .selfy {
+        width: auto;
+        height: auto;
     }
 }
 

@@ -1,19 +1,21 @@
 import React from 'react';
-import common from "../../../common/styles/CommonFlexContainer.module.css";
 import btn from '../../../common/styles/Button.module.css'
 import s from './Work.module.css'
+import {Rotate} from "react-reveal";
 
 const Work = (props) => {
     return (
-        <div className={s.workContainer} style={props.style}>
-            <div>
-                <div className={s.title}><h3>{props.title}</h3></div>
+        <Rotate top left>
+            <div className={s.workContainer} style={props.style}>
+                <div>
+                    <div className={s.title}><h3>{props.title}</h3></div>
+                </div>
+                <div className={s.description}>{props.descriription}</div>
+                <div className={s.btnBox}>
+                    <a className={s.viewLink} href={props.href}><button className={btn.clickbtn}>View</button></a>
+                </div>
             </div>
-            <div className={s.description}>{props.descriription}</div>
-            <div className={s.btnBox}>
-                <a><button className={btn.clickbtn}>View</button></a>
-            </div>
-        </div>
+        </Rotate>
     );
 };
 

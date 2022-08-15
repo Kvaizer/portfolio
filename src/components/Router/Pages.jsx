@@ -4,6 +4,7 @@ import Main from "../Main/Main";
 import Skills from "../Skills/Skills";
 import HireMe from "../HireMe/HireMe";
 import Works from "../Works/Works";
+import Cv from "../CV/cv";
 
 export const PATH = {
     MAIN: '/main',
@@ -11,6 +12,7 @@ export const PATH = {
     SKILLS: '/skills',
     WORKS: '/works',
     CONTACTS: '/contacts',
+    CV: '/cv'
 }
 
 const Pages = () => {
@@ -22,6 +24,7 @@ const Pages = () => {
                 <Route path={PATH.SKILLS} element={<Skills/>}/>
                 <Route path={PATH.CONTACTS} element={<HireMe/>}/>
                 <Route path={PATH.WORKS} element={<Works/>}/>
+                <Route path={PATH.CV} element={<Cv/>}/>
             </Routes>
         </div>
     );

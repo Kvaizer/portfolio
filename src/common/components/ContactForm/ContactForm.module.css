@@ -11,6 +11,8 @@
     margin-right: 2em;
 }
 
+
+
 input, textarea{
     background-color: rgb(33 33 33);
     border: none;
@@ -74,6 +76,8 @@ form {
     color: #FF651C;
 }
 
+
+
 .textError::after {
     content: '';
     position: absolute;
@@ -114,4 +118,6 @@ form {
         text-align: center;
     }
 }
+
+
 

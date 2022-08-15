@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './ProgressBar.module.css'
+import RubberBand from 'react-reveal/RubberBand'
 
 const ProgressBar = ({title, size}) => {
     let style = {
@@ -15,14 +16,16 @@ const ProgressBar = ({title, size}) => {
     }
 
     return (
-        <div className={s.box}>
-            <div className={s.title}><span>{title}</span></div>
-            <div className={s.line}>
-                <div style={style}>
-                    <span className={s.lineTitle}>{`${size}%`}</span>
+        <RubberBand>
+            <div className={s.box}>
+                <div className={s.title}><span>{title}</span></div>
+                <div className={s.line}>
+                    <div style={style}>
+                        <span className={s.lineTitle}>{`${size}%`}</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </RubberBand>
     );
 };
 

@@ -5,6 +5,7 @@
     align-items: center;
     min-height: 100vh;
     width: 100%;
+    padding-bottom: 60px;
 }
 
 .containerInner {
@@ -29,8 +30,9 @@
 }
 
 
-.text {
+h3 .text {
     color: #ff651c;
+    font-size: 1.2rem;
 }
 
 .aboutBlock {
@@ -72,7 +74,7 @@
 }
 
 .aboutMeText {
-    margin-top: 5rem
+    margin-top: 5rem;
 }
 
 .personalInformation {
@@ -131,7 +133,7 @@ li {
 }
 
 .contactsBarBox {
-    padding-top: 7em;
+    padding-top: 3em;
 }
 
 .titleText {
@@ -158,6 +160,11 @@ li {
     display: none;
     width: 100%;
     border: 1px solid #ff651c;
+}
+
+.selfy {
+    width: 400px;
+    height: 400px;
 }
 
 @media screen and (max-width: 1499px) {
@@ -192,7 +199,7 @@ li {
     }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 762px) {
     h5 {
         font-size: 14px;
     }
@@ -205,6 +212,10 @@ li {
 
     .skillsContainer {
         width: 80%;
+    }
+    .selfy {
+        width: auto;
+        height: auto;
     }
 }
 
