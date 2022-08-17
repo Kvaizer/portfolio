@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useFormik} from 'formik';
 import s from './ContactForm.module.css'
 import btn from '../../styles/Button.module.css'
@@ -6,6 +6,7 @@ import axios from "axios";
 import {Fade} from "react-reveal";
 
 const ContactForm = (props) => {
+    const [disabledSubmitBtn, setDisabledSubmitBtn] = useState(false)
 
     const formik = useFormik({
         initialValues: {
@@ -37,7 +38,7 @@ const ContactForm = (props) => {
             return errors;
         },
         onSubmit: values => {
-            debugger
+            setDisabledSubmitBtn(true)
             axios.post('https://smtp-mail-nodejs-server.herokuapp.com/sendMessage', {
                 email: values.email,
                 name: values.name,
@@ -45,6 +46,7 @@ const ContactForm = (props) => {
                 message: values.message
             }).then(res => {
                 props.setPopUp(true)
+                setDisabledSubmitBtn(false)
             })
         },
     })
@@ -95,8 +97,9 @@ const ContactForm = (props) => {
                     <div className={s.btnBox}>
                         <button type={'submit'}
                                 className={btn.clickbtn}
+                                disabled={disabledSubmitBtn}
                         >
-                            Send Message
+                            {!disabledSubmitBtn ? 'Send Message' : 'Loading...'}
                         </button>
                     </div>
                 </form>
